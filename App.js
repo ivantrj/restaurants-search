@@ -36,26 +36,12 @@ export default function App() {
     <View style={styles.container}>
       <Header />
       <Search />
-<<<<<<< HEAD
-      <CategoryItem
-        name="Burger"
-        imageUrl={require("./src/assets/images/burger.png")}
-      />
-      <CategoryItem
-        name="Pizza"
-        imageUrl={require("./src/assets/images/pizza.png")}
-      />
-      <CategoryItem
-        name="Dessert"
-        imageUrl={require("./src/assets/images/cake.png")}
-=======
       <FlatList
         data={commonCategories}
         renderItem={({ item }) => (
           <CategoryItem name={item.name} imageUrl={item.imageUrl} />
         )}
         horizontal={true}
->>>>>>> 26e22c2 (add flatlist)
       />
       <StatusBar style="auto" />
     </View>
