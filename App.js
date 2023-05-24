@@ -38,10 +38,16 @@ export default function App() {
       <Search />
       <FlatList
         data={commonCategories}
-        renderItem={({ item }) => (
-          <CategoryItem name={item.name} imageUrl={item.imageUrl} />
+        renderItem={({ item, index }) => (
+          <CategoryItem
+            name={item.name}
+            imageUrl={item.imageUrl}
+            index={index}
+          />
         )}
         horizontal={true}
+        showsHorizontalScrollIndicator={false}
+        keyExtractor={(item) => item.name}
       />
       <StatusBar style="auto" />
     </View>
